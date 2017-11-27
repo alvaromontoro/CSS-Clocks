@@ -24,7 +24,7 @@ There are two versions of this clock: one in which the rotation is continuous/pr
 
 In this clock, the approximate time (it has an error of +/- 4 minutes) is displayed via text, highlighting the current time in a bright color while the rest of the letters are darker.
 
-This was actually a really tricky clock to develop only with HTML and CSS. I used SASS/SCSS because it saved me writing hundreds of lines of code.
+This was actually a really tricky clock to develop only with HTML and CSS. I used SASS/SCSS because it saved me writing thousands of lines of code (almost 6,000 compiled, but only 140 uncompiled!).
 
 ![Square Text Clock on Imgur](https://i.imgur.com/O69bSLV.jpg)
 
