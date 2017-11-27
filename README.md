@@ -1,19 +1,32 @@
 # CSS Clocks
+
 Clocks developed using CSS and HTML, without any JavaScript or any other scripting language<sup>*</sup>.
+
+Many of these clocks were developed as part of an app I developed a few years back titled MultiClocks, but they used JavaScript to function. I removed the JavaScript and added CSS animations to make them work again.
 
 ## The Clocks
 
 ### Analog Clock
 
-![Analog Clock on Imgur](https://i.imgur.com/IZ7jGq3.png)
+The traditional analog clock, with 3 arms pointing to the hours, minutes, and seconds.
+
+![Analog Clock on Imgur](https://i.imgur.com/BPp3t6T.jpg)
 
 ### Radial Clock
 
-![Radial Clock on Imgur](https://i.imgur.com/2x2st2w.png)
+A set of concentric circles with hours, minutes, and seconds written in text, they rotate (see versions below) to let the current time visible in the center line.
+
+There are two versions of this clock: one in which the rotation is continuous/progressive, and another in which the rotation is step by step (changes every second).
+
+![Radial Clock on Imgur](https://i.imgur.com/ohbO3BE.jpg)
 
 ### Square Text Clock
 
-![Square Text Clock on Imgur](https://i.imgur.com/sSYBqZG.png)
+In this clock, the approximate time (it has an error of +/- 4 minutes) is displayed via text, highlighting the current time in a bright color while the rest of the letters are darker.
+
+This was actually a really tricky clock to develop only with HTML and CSS. I used SASS/SCSS because it saved me writing hundreds of lines of code.
+
+![Square Text Clock on Imgur](https://i.imgur.com/O69bSLV.jpg)
 
 
 ## Demos
