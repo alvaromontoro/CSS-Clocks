@@ -28,6 +28,13 @@ This was actually a really tricky clock to develop only with HTML and CSS. I use
 
 ![Square Text Clock on Imgur](https://i.imgur.com/O69bSLV.jpg)
 
+### Timelines Clock
+
+The clock shows a map of the world displaying an approximate time on each region. The user would need to know Geography in order to know where to look for time.
+
+This clock is inaccurate because it doesn't take into account delimited time zones. It takes GMT as a starting point, and divides the map in equal parts.
+
+![Timelines clock on Imgur](https://i.imgur.com/bIueStS.jpg)
 
 ## Demos
 
@@ -37,6 +44,7 @@ You can see demos for these clocks on my CodePen:
 - [Radial clock (progressive)](https://codepen.io/alvaromontoro/full/zEjLag/)
 - [Radial clock (step by step)](https://codepen.io/alvaromontoro/full/oGygKq/)
 - [Square Text clock](https://codepen.io/alvaromontoro/full/Nwgarb/)
+- [Timelines clock](https://codepen.io/alvaromontoro/full/dZjwVe/)
 
 <br/>
 <br/>
