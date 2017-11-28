@@ -28,6 +28,14 @@ This was actually a really tricky clock to develop only with HTML and CSS. I use
 
 ![Square Text Clock on Imgur](https://i.imgur.com/O69bSLV.jpg)
 
+## Sunlight Clock
+
+The clock shows a map of the world displaying an approximate sunlight status in each region. The user would need to know Geography in order to know where to look for on the map... also, there is no real notion of time, just of sunlight.
+
+TODO: Update the clock so the shade is upside down during summer.
+
+![Sunlight Clock on Imgur](https://i.imgur.com/wdd34UV.jpg)
+
 ### Timelines Clock
 
 The clock shows a map of the world displaying an approximate time on each region. The user would need to know Geography in order to know where to look for time.
@@ -44,6 +52,7 @@ You can see demos for these clocks on my CodePen:
 - [Radial clock (progressive)](https://codepen.io/alvaromontoro/full/zEjLag/)
 - [Radial clock (step by step)](https://codepen.io/alvaromontoro/full/oGygKq/)
 - [Square Text clock](https://codepen.io/alvaromontoro/full/Nwgarb/)
+- [Sunlight clock](https://codepen.io/alvaromontoro/full/OOwdLP/)
 - [Timelines clock](https://codepen.io/alvaromontoro/full/dZjwVe/)
 
 <br/>
