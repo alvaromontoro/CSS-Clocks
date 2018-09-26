@@ -1,0 +1,249 @@
+/* To view a minified version using SCSS visit: https://codepen.io/alvaromontoro/pen/jGYQoP */
+
+@keyframes rotateArms {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotateArms {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotateArms {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.clock {
+  width: 200px;
+  height: 200px;
+  box-shadow: 0px 0px 0px 10px #222;
+  border-radius: 200px;
+  position: relative;
+}
+
+.center,
+.minute-lines>div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.knob {
+  width: 13.33333px;
+  height: 13.33333px;
+  background: #111;
+  border-radius: 13.33333px;
+  z-index: 4;
+}
+
+.arm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: top left 0;
+  z-index: 2;
+  width: 0;
+  animation: rotateArms linear 60s infinite;
+  -webkit-animation: rotateArms linear 60s infinite;
+  -moz-animation: rotateArms linear 60s infinite;
+}
+
+.minute.arm {
+  height: 76.92308px;
+  box-shadow: 0 0 0 2px #444;
+  animation-duration: 3600s;
+  -webkit-animation-duration: 3600s;
+  -moz-animation-duration: 3600s;
+}
+
+.hour.arm {
+  height: 55.55556px;
+  box-shadow: 0 0 0 3.33333px #333;
+  animation-duration: 43200s;
+  -webkit-animation-duration: 43200s;
+  -moz-animation-duration: 43200s;
+}
+
+.second.arm {
+  height: 90.90909px;
+  box-shadow: 0 0 0 1.33333px #a00;
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.minute-lines>.min-0 {
+  transform: rotate(0deg);
+}
+
+.minute-lines>.min-1 {
+  transform: rotate(6deg);
+}
+
+.minute-lines>.min-2 {
+  transform: rotate(12deg);
+}
+
+.minute-lines>.min-3 {
+  transform: rotate(18deg);
+}
+
+.minute-lines>.min-4 {
+  transform: rotate(24deg);
+}
+
+.minute-lines>.min-5 {
+  transform: rotate(30deg);
+}
+
+.minute-lines>.min-6 {
+  transform: rotate(36deg);
+}
+
+.minute-lines>.min-7 {
+  transform: rotate(42deg);
+}
+
+.minute-lines>.min-8 {
+  transform: rotate(48deg);
+}
+
+.minute-lines>.min-9 {
+  transform: rotate(54deg);
+}
+
+.minute-lines>.min-10 {
+  transform: rotate(60deg);
+}
+
+.minute-lines>.min-11 {
+  transform: rotate(66deg);
+}
+
+.minute-lines>.min-12 {
+  transform: rotate(72deg);
+}
+
+.minute-lines>.min-13 {
+  transform: rotate(78deg);
+}
+
+.minute-lines>.min-14 {
+  transform: rotate(84deg);
+}
+
+.minute-lines>.min-15 {
+  transform: rotate(90deg);
+}
+
+.minute-lines>.min-16 {
+  transform: rotate(96deg);
+}
+
+.minute-lines>.min-17 {
+  transform: rotate(102deg);
+}
+
+.minute-lines>.min-18 {
+  transform: rotate(108deg);
+}
+
+.minute-lines>.min-19 {
+  transform: rotate(114deg);
+}
+
+.minute-lines>.min-20 {
+  transform: rotate(120deg);
+}
+
+.minute-lines>.min-21 {
+  transform: rotate(126deg);
+}
+
+.minute-lines>.min-22 {
+  transform: rotate(132deg);
+}
+
+.minute-lines>.min-23 {
+  transform: rotate(138deg);
+}
+
+.minute-lines>.min-24 {
+  transform: rotate(144deg);
+}
+
+.minute-lines>.min-25 {
+  transform: rotate(150deg);
+}
+
+.minute-lines>.min-26 {
+  transform: rotate(156deg);
+}
+
+.minute-lines>.min-27 {
+  transform: rotate(162deg);
+}
+
+.minute-lines>.min-28 {
+  transform: rotate(168deg);
+}
+
+.minute-lines>.min-29 {
+  transform: rotate(174deg);
+}
+
+.minute-lines {
+  width: 100%;
+  height: 100%;
+}
+
+.minute-lines>div::before,
+.minute-lines>div::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 5px;
+  top: 88.88889px;
+  box-shadow: 0px 0px 0px 0.5px #000;
+}
+
+.minute-lines>div::after {
+  bottom: 88.88889px;
+  top: auto;
+}
+
+div.long::before,
+div.long::after {
+  height: 9.09091px;
+  top: 84.4773px;
+}
+
+div.long::after {
+  bottom: 84.4773px;
+  top: auto;
+}
+
+div.dark::before,
+div.dark::after {
+  box-shadow: 0px 0px 0px 1px #000;
+}

@@ -1,0 +1,522 @@
+/* To view a minified version using SCSS visit: https://codepen.io/alvaromontoro/pen/oGygKq */
+
+@import url("https://fonts.googleapis.com/css?family=Anton");
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Anton, arial, verdana, sans-serif;
+  background: #333;
+  color: #111;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+@keyframes rotateArms {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotateArms {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotateArms {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#clock,
+#band {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  width: 100%;
+  overflow: visible;
+  height: auto;
+}
+
+#band {
+  background: #eee;
+  height: 1.3em;
+  width: 100%;
+  transform: translate(0, 0.1em);
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+}
+
+#hours,
+#minutes,
+#seconds {
+  animation: rotateArms steps(60, end) 60s infinite;
+  -webkit-animation: rotateArms steps(60, end) 60s infinite;
+  -moz-animation: rotateArms steps(60, end) 60s infinite;
+  transform-origin: 0 50%;
+  height: 1em;
+  overflow: visible;
+}
+
+#minutes {
+  animation-duration: 3600s;
+  -webkit-animation-duration: 3600s;
+  -moz-animation-duration: 3600s;
+}
+
+#hours {
+  animation: rotateArms steps(12, end) 43200s infinite;
+  -webkit-animation: rotateArms steps(24, end) 21600s infinite;
+  -moz-animation: rotateArms steps(24, end) 21600s infinite;
+}
+
+#hours>div,
+#minutes>div,
+#seconds>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 70px;
+  transform-origin: 0 50%;
+  white-space: nowrap;
+  height: 1em;
+  text-transform: lowercase;
+}
+
+#minutes>div {
+  padding-left: 220px;
+}
+
+#seconds>div {
+  padding-left: 420px;
+}
+
+#text-hours,
+#text-minutes,
+#text-seconds {
+  color: #a00;
+  position: absolute;
+  margin-left: 160px;
+}
+
+#text-minutes {
+  margin-left: 340px;
+}
+
+#text-seconds {
+  margin-left: 540px;
+}
+
+#hours>div:nth-child(1) {
+  transform: rotate(-15deg);
+}
+
+#hours>div:nth-child(2) {
+  transform: rotate(-30deg);
+}
+
+#hours>div:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+#hours>div:nth-child(4) {
+  transform: rotate(-60deg);
+}
+
+#hours>div:nth-child(5) {
+  transform: rotate(-75deg);
+}
+
+#hours>div:nth-child(6) {
+  transform: rotate(-90deg);
+}
+
+#hours>div:nth-child(7) {
+  transform: rotate(-105deg);
+}
+
+#hours>div:nth-child(8) {
+  transform: rotate(-120deg);
+}
+
+#hours>div:nth-child(9) {
+  transform: rotate(-135deg);
+}
+
+#hours>div:nth-child(10) {
+  transform: rotate(-150deg);
+}
+
+#hours>div:nth-child(11) {
+  transform: rotate(-165deg);
+}
+
+#hours>div:nth-child(12) {
+  transform: rotate(-180deg);
+}
+
+#hours>div:nth-child(13) {
+  transform: rotate(-195deg);
+}
+
+#hours>div:nth-child(14) {
+  transform: rotate(-210deg);
+}
+
+#hours>div:nth-child(15) {
+  transform: rotate(-225deg);
+}
+
+#hours>div:nth-child(16) {
+  transform: rotate(-240deg);
+}
+
+#hours>div:nth-child(17) {
+  transform: rotate(-255deg);
+}
+
+#hours>div:nth-child(18) {
+  transform: rotate(-270deg);
+}
+
+#hours>div:nth-child(19) {
+  transform: rotate(-285deg);
+}
+
+#hours>div:nth-child(20) {
+  transform: rotate(-300deg);
+}
+
+#hours>div:nth-child(21) {
+  transform: rotate(-315deg);
+}
+
+#hours>div:nth-child(22) {
+  transform: rotate(-330deg);
+}
+
+#hours>div:nth-child(23) {
+  transform: rotate(-345deg);
+}
+
+#hours>div:nth-child(24) {
+  transform: rotate(-360deg);
+}
+
+#minutes>div:nth-child(1),
+#seconds>div:nth-child(1) {
+  transform: rotate(-6deg);
+}
+
+#minutes>div:nth-child(2),
+#seconds>div:nth-child(2) {
+  transform: rotate(-12deg);
+}
+
+#minutes>div:nth-child(3),
+#seconds>div:nth-child(3) {
+  transform: rotate(-18deg);
+}
+
+#minutes>div:nth-child(4),
+#seconds>div:nth-child(4) {
+  transform: rotate(-24deg);
+}
+
+#minutes>div:nth-child(5),
+#seconds>div:nth-child(5) {
+  transform: rotate(-30deg);
+}
+
+#minutes>div:nth-child(6),
+#seconds>div:nth-child(6) {
+  transform: rotate(-36deg);
+}
+
+#minutes>div:nth-child(7),
+#seconds>div:nth-child(7) {
+  transform: rotate(-42deg);
+}
+
+#minutes>div:nth-child(8),
+#seconds>div:nth-child(8) {
+  transform: rotate(-48deg);
+}
+
+#minutes>div:nth-child(9),
+#seconds>div:nth-child(9) {
+  transform: rotate(-54deg);
+}
+
+#minutes>div:nth-child(10),
+#seconds>div:nth-child(10) {
+  transform: rotate(-60deg);
+}
+
+#minutes>div:nth-child(11),
+#seconds>div:nth-child(11) {
+  transform: rotate(-66deg);
+}
+
+#minutes>div:nth-child(12),
+#seconds>div:nth-child(12) {
+  transform: rotate(-72deg);
+}
+
+#minutes>div:nth-child(13),
+#seconds>div:nth-child(13) {
+  transform: rotate(-78deg);
+}
+
+#minutes>div:nth-child(14),
+#seconds>div:nth-child(14) {
+  transform: rotate(-84deg);
+}
+
+#minutes>div:nth-child(15),
+#seconds>div:nth-child(15) {
+  transform: rotate(-90deg);
+}
+
+#minutes>div:nth-child(16),
+#seconds>div:nth-child(16) {
+  transform: rotate(-96deg);
+}
+
+#minutes>div:nth-child(17),
+#seconds>div:nth-child(17) {
+  transform: rotate(-102deg);
+}
+
+#minutes>div:nth-child(18),
+#seconds>div:nth-child(18) {
+  transform: rotate(-108deg);
+}
+
+#minutes>div:nth-child(19),
+#seconds>div:nth-child(19) {
+  transform: rotate(-114deg);
+}
+
+#minutes>div:nth-child(20),
+#seconds>div:nth-child(20) {
+  transform: rotate(-120deg);
+}
+
+#minutes>div:nth-child(21),
+#seconds>div:nth-child(21) {
+  transform: rotate(-126deg);
+}
+
+#minutes>div:nth-child(22),
+#seconds>div:nth-child(22) {
+  transform: rotate(-132deg);
+}
+
+#minutes>div:nth-child(23),
+#seconds>div:nth-child(23) {
+  transform: rotate(-138deg);
+}
+
+#minutes>div:nth-child(24),
+#seconds>div:nth-child(24) {
+  transform: rotate(-144deg);
+}
+
+#minutes>div:nth-child(25),
+#seconds>div:nth-child(25) {
+  transform: rotate(-150deg);
+}
+
+#minutes>div:nth-child(26),
+#seconds>div:nth-child(26) {
+  transform: rotate(-156deg);
+}
+
+#minutes>div:nth-child(27),
+#seconds>div:nth-child(27) {
+  transform: rotate(-162deg);
+}
+
+#minutes>div:nth-child(28),
+#seconds>div:nth-child(28) {
+  transform: rotate(-168deg);
+}
+
+#minutes>div:nth-child(29),
+#seconds>div:nth-child(29) {
+  transform: rotate(-174deg);
+}
+
+#minutes>div:nth-child(30),
+#seconds>div:nth-child(30) {
+  transform: rotate(-180deg);
+}
+
+#minutes>div:nth-child(31),
+#seconds>div:nth-child(31) {
+  transform: rotate(-186deg);
+}
+
+#minutes>div:nth-child(32),
+#seconds>div:nth-child(32) {
+  transform: rotate(-192deg);
+}
+
+#minutes>div:nth-child(33),
+#seconds>div:nth-child(33) {
+  transform: rotate(-198deg);
+}
+
+#minutes>div:nth-child(34),
+#seconds>div:nth-child(34) {
+  transform: rotate(-204deg);
+}
+
+#minutes>div:nth-child(35),
+#seconds>div:nth-child(35) {
+  transform: rotate(-210deg);
+}
+
+#minutes>div:nth-child(36),
+#seconds>div:nth-child(36) {
+  transform: rotate(-216deg);
+}
+
+#minutes>div:nth-child(37),
+#seconds>div:nth-child(37) {
+  transform: rotate(-222deg);
+}
+
+#minutes>div:nth-child(38),
+#seconds>div:nth-child(38) {
+  transform: rotate(-228deg);
+}
+
+#minutes>div:nth-child(39),
+#seconds>div:nth-child(39) {
+  transform: rotate(-234deg);
+}
+
+#minutes>div:nth-child(40),
+#seconds>div:nth-child(40) {
+  transform: rotate(-240deg);
+}
+
+#minutes>div:nth-child(41),
+#seconds>div:nth-child(41) {
+  transform: rotate(-246deg);
+}
+
+#minutes>div:nth-child(42),
+#seconds>div:nth-child(42) {
+  transform: rotate(-252deg);
+}
+
+#minutes>div:nth-child(43),
+#seconds>div:nth-child(43) {
+  transform: rotate(-258deg);
+}
+
+#minutes>div:nth-child(44),
+#seconds>div:nth-child(44) {
+  transform: rotate(-264deg);
+}
+
+#minutes>div:nth-child(45),
+#seconds>div:nth-child(45) {
+  transform: rotate(-270deg);
+}
+
+#minutes>div:nth-child(46),
+#seconds>div:nth-child(46) {
+  transform: rotate(-276deg);
+}
+
+#minutes>div:nth-child(47),
+#seconds>div:nth-child(47) {
+  transform: rotate(-282deg);
+}
+
+#minutes>div:nth-child(48),
+#seconds>div:nth-child(48) {
+  transform: rotate(-288deg);
+}
+
+#minutes>div:nth-child(49),
+#seconds>div:nth-child(49) {
+  transform: rotate(-294deg);
+}
+
+#minutes>div:nth-child(50),
+#seconds>div:nth-child(50) {
+  transform: rotate(-300deg);
+}
+
+#minutes>div:nth-child(51),
+#seconds>div:nth-child(51) {
+  transform: rotate(-306deg);
+}
+
+#minutes>div:nth-child(52),
+#seconds>div:nth-child(52) {
+  transform: rotate(-312deg);
+}
+
+#minutes>div:nth-child(53),
+#seconds>div:nth-child(53) {
+  transform: rotate(-318deg);
+}
+
+#minutes>div:nth-child(54),
+#seconds>div:nth-child(54) {
+  transform: rotate(-324deg);
+}
+
+#minutes>div:nth-child(55),
+#seconds>div:nth-child(55) {
+  transform: rotate(-330deg);
+}
+
+#minutes>div:nth-child(56),
+#seconds>div:nth-child(56) {
+  transform: rotate(-336deg);
+}
+
+#minutes>div:nth-child(57),
+#seconds>div:nth-child(57) {
+  transform: rotate(-342deg);
+}
+
+#minutes>div:nth-child(58),
+#seconds>div:nth-child(58) {
+  transform: rotate(-348deg);
+}
+
+#minutes>div:nth-child(59),
+#seconds>div:nth-child(59) {
+  transform: rotate(-354deg);
+}
+
+#minutes>div:nth-child(60),
+#seconds>div:nth-child(60) {
+  transform: rotate(-360deg);
+}

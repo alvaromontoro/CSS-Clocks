@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="description" content="Analog clock developed using CSS and HTML, without JavaScript" />
+    <link rel="author" href="https://alvaromontoro.com" />
+    
+    <title>Analog Clock in CSS</title>
+    
+    <link rel="stylesheet" href="./clock-analog.css" />
+    
+  </head>
+  
+  <body>
+  
+    <div class="clock center">
+      <div class="knob center"></div>
+      <div class="box seconds">
+        <div class="arm second"></div>
+      </div>
+      <div class="box minutes">
+        <div class="arm minute"></div>
+      </div>
+      <div class="box hours">
+        <div class="arm hour"></div>
+      </div>
+      <div class="minute-lines">
+        <div class="min-0 long dark"></div>
+        <div class="min-1"></div>
+        <div class="min-2"></div>
+        <div class="min-3"></div>
+        <div class="min-4"></div>
+        <div class="min-5 dark"></div>
+        <div class="min-6"></div>
+        <div class="min-7"></div>
+        <div class="min-8"></div>
+        <div class="min-9"></div>
+        <div class="min-10 dark"></div>
+        <div class="min-11"></div>
+        <div class="min-12"></div>
+        <div class="min-13"></div>
+        <div class="min-14"></div>
+        <div class="min-15 long dark"></div>
+        <div class="min-16"></div>
+        <div class="min-17"></div>
+        <div class="min-18"></div>
+        <div class="min-19"></div>
+        <div class="min-20 dark"></div>
+        <div class="min-21"></div>
+        <div class="min-22"></div>
+        <div class="min-23"></div>
+        <div class="min-24"></div>
+        <div class="min-25 dark"></div>
+        <div class="min-26"></div>
+        <div class="min-27"></div>
+        <div class="min-28"></div>
+        <div class="min-29"></div>
+      </div>
+    </div>
+  
+    <script>
+    /**
+     * This code is just to set the initial timing, it could be done on the server side without needing any JS
+     */
+    var date = new Date();
+
+    var seconds = date.getSeconds() * 6;
+    var minutes = date.getMinutes() * 6 + seconds/60;
+    var hours = (180 + date.getHours()%12 * 30 + minutes / 15);
+
+    document.querySelector(".box.seconds").style.transform = "rotate(" + (180 + seconds) + "deg)"; 
+    document.querySelector(".box.minutes").style.transform = "rotate(" + (180 + minutes) + "deg)"; document.querySelector(".box.hours").style.transform = "rotate(" + hours + "deg)"; 
+    </script>
+  
+  </body>
+  
+</html>

@@ -1,0 +1,59 @@
+/* To view a minified version using SCSS visit: https://codepen.io/alvaromontoro/pen/dZjwVe */
+
+@keyframes moveTimeZones {
+  from {
+    left: 0
+  }
+  to {
+    left: -1000px;
+  }
+}
+
+#clock {
+  width: 1000px;
+  height: 630px;
+  position: relative;
+  border: 1px solid #aaa;
+  overflow: hidden;
+  margin: auto auto;
+}
+
+#clock svg {
+  position: absolute;
+  width: 1000px;
+  height: 600px;
+  top: 30px;
+  left: 0;
+  z-index: 1;
+}
+
+#lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2000px;
+  z-index: 2;
+  animation: moveTimeZones linear 86400s infinite;
+}
+
+#lines>div {
+  box-sizing: border-box;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: calc(1000px / 24);
+  float: left;
+  line-height: 30px;
+  font-size: 0.65em;
+  font-family: verdana, arial, sans-serif;
+  text-align: center;
+}
+
+#lines>div:nth-of-type(2n) {
+  background: rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#lines>div:nth-of-type(12n) {
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+}

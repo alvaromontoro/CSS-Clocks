@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="description" content="Text clock developed using CSS and HTML, without JavaScript" />
+    <link rel="author" href="https://alvaromontoro.com" />
+    
+    <title>Text Clock in CSS</title>
+    
+    <link rel="stylesheet" href="./clock-square-text.css" />
+    
+  </head>
+  
+  <body>
+  
+    <div id="clock" class="center">
+      H J L L Y A V R O K M S<br/>
+      <span class="active">I T</span> E <span class="active">I S</span> B P W C V A Q<br/> X <span class="min m15">A</span> M <span class="min m15">Q U A R T E R</span> S T<br/>
+      <span class="min m20 m25 m35 m40">T W E N T Y</span> V <span class="min m5">F I V E</span> P<br/>
+      <span class="min m30">H A L F</span> Y <span class="min m10 m50">T E N</span> Z S <span class="before">T O</span><br/> P <span class="after">P A S T</span> I X <span class="hour h9">N I N E</span> S<br/>
+      <span class="hour h1">O N E</span> <span class="hour h6">S I X</span> M <span class="hour h3">T H R E E</span><br/>
+      <span class="hour h4">F O U R</span> Y <span class="hour h5">F I V E</span> <span class="hour h2">T W O</span><br/>
+      <span class="hour h8">E I G H T</span> C <span class="hour h11">E L E V E N</span><br/>
+      <span class="hour h7">S E V E N</span> D <span class="hour h0">T W E L V E</span><br/> H <span class="hour h10">T E N</span> Q O <span class="min m0">O C L O C K</span><br/> A M D N J L W F H L A T
+    </div>
+        
+    <script>
+    /**
+     * This code is just to set the initial timing, it could be done on the server side without needing any JS
+     */
+    var date = new Date();
+    var minutes = 5 * Math.round(date.getMinutes() / 5);
+    var hours = date.getHours() % 12;
+
+    document.getElementById("clock").classList.add("minute" + minutes);
+    document.getElementById("clock").classList.add("hour" + hours);
+    </script>
+  
+  </body>
+  
+</html>

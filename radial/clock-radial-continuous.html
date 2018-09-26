@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="description" content="Radial clock developed using CSS and HTML, without JavaScript" />
+    <link rel="author" href="https://alvaromontoro.com" />
+    
+    <title>Radial Clock (continuous) in CSS</title>
+    
+    <link rel="stylesheet" href="./clock-radial-continuous.css" />
+    
+  </head>
+  
+  <body>
+  
+    <div id="clock">
+      <div id="band"></div>
+      <div class="box hours">
+        <div id="hours">
+          <div>One</div>
+          <div>Two</div>
+          <div>Three</div>
+          <div>Four</div>
+          <div>Five</div>
+          <div>Six</div>
+          <div>Seven</div>
+          <div>Eight</div>
+          <div>Nine</div>
+          <div>Ten</div>
+          <div>Eleven</div>
+          <div>Twelve</div>
+        </div>
+      </div>
+      <div class="box minutes">
+        <div id="minutes">
+          <div>One</div>
+          <div>Two</div>
+          <div>Three</div>
+          <div>Four</div>
+          <div>Five</div>
+          <div>Six</div>
+          <div>Seven</div>
+          <div>Eight</div>
+          <div>Nine</div>
+          <div>Ten</div>
+          <div>Eleven</div>
+          <div>Twelve</div>
+          <div>Thirteen</div>
+          <div>Fourteen</div>
+          <div>Fifteen</div>
+          <div>Sixteen</div>
+          <div>Seventeen</div>
+          <div>Eighteen</div>
+          <div>Nineteen</div>
+          <div>Twenty</div>
+          <div>Twenty One</div>
+          <div>Twenty Two</div>
+          <div>Twenty Three</div>
+          <div>Twenty Four</div>
+          <div>Twenty Five</div>
+          <div>Twenty Six</div>
+          <div>Twenty Seven</div>
+          <div>Twenty Eight</div>
+          <div>Twenty Nine</div>
+          <div>Thirty</div>
+          <div>Thirty One</div>
+          <div>Thirty Two</div>
+          <div>Thirty Three</div>
+          <div>Thirty Four</div>
+          <div>Thirty Five</div>
+          <div>Thirty Six</div>
+          <div>Thirty Seven</div>
+          <div>Thirty Eight</div>
+          <div>Thirty Nine</div>
+          <div>Forty </div>
+          <div>Forty One</div>
+          <div>Forty Two</div>
+          <div>Forty Three</div>
+          <div>Forty Four</div>
+          <div>Forty Five</div>
+          <div>Forty Six</div>
+          <div>Forty Seven</div>
+          <div>Forty Eight</div>
+          <div>Forty Nine</div>
+          <div>Fifty </div>
+          <div>Fifty One</div>
+          <div>Fifty Two</div>
+          <div>Fifty Three</div>
+          <div>Fifty Four</div>
+          <div>Fifty Five</div>
+          <div>Fifty Six</div>
+          <div>Fifty Seven</div>
+          <div>Fifty Eight</div>
+          <div>Fifty Nine</div>
+          <div>Zero</div>
+        </div>
+      </div>
+      <div class="box seconds">
+        <div id="seconds">
+          <div>One</div>
+          <div>Two</div>
+          <div>Three</div>
+          <div>Four</div>
+          <div>Five</div>
+          <div>Six</div>
+          <div>Seven</div>
+          <div>Eight</div>
+          <div>Nine</div>
+          <div>Ten</div>
+          <div>Eleven</div>
+          <div>Twelve</div>
+          <div>Thirteen</div>
+          <div>Fourteen</div>
+          <div>Fifteen</div>
+          <div>Sixteen</div>
+          <div>Seventeen</div>
+          <div>Eighteen</div>
+          <div>Nineteen</div>
+          <div>Twenty</div>
+          <div>Twenty One</div>
+          <div>Twenty Two</div>
+          <div>Twenty Three</div>
+          <div>Twenty Four</div>
+          <div>Twenty Five</div>
+          <div>Twenty Six</div>
+          <div>Twenty Seven</div>
+          <div>Twenty Eight</div>
+          <div>Twenty Nine</div>
+          <div>Thirty</div>
+          <div>Thirty One</div>
+          <div>Thirty Two</div>
+          <div>Thirty Three</div>
+          <div>Thirty Four</div>
+          <div>Thirty Five</div>
+          <div>Thirty Six</div>
+          <div>Thirty Seven</div>
+          <div>Thirty Eight</div>
+          <div>Thirty Nine</div>
+          <div>Forty </div>
+          <div>Forty One</div>
+          <div>Forty Two</div>
+          <div>Forty Three</div>
+          <div>Forty Four</div>
+          <div>Forty Five</div>
+          <div>Forty Six</div>
+          <div>Forty Seven</div>
+          <div>Forty Eight</div>
+          <div>Forty Nine</div>
+          <div>Fifty </div>
+          <div>Fifty One</div>
+          <div>Fifty Two</div>
+          <div>Fifty Three</div>
+          <div>Fifty Four</div>
+          <div>Fifty Five</div>
+          <div>Fifty Six</div>
+          <div>Fifty Seven</div>
+          <div>Fifty Eight</div>
+          <div>Fifty Nine</div>
+          <div>Zero</div>
+        </div>
+      </div>
+     </div>
+        
+    <script>
+    /**
+     * This code is just to set the initial timing, it could be done on the server side without needing any JS
+     */
+    var date = new Date();
+
+    var seconds = date.getSeconds();
+    var minutes = date.getMinutes();
+    var hours = (date.getHours() - 1) * 15;
+
+    document.querySelector(".box.seconds").style.transform = "rotate(" + (seconds*6) + "deg)"; 
+    document.querySelector(".box.minutes").style.transform = "rotate(" + (minutes*6) + "deg)"; 
+    document.querySelector("#minutes").style.animationDelay = (-seconds) + "s";
+    document.querySelector(".box.hours").style.transform = "rotate(" + hours + "deg)"; 
+    document.querySelector("#hours").style.animationDelay = (-(minutes * 60 + seconds)) + "s";
+    </script>
+  
+  </body>
+  
+</html>

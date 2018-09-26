@@ -1,0 +1,15 @@
+/* To view a minified version using SCSS visit: https://codepen.io/alvaromontoro/pen/OOwdLP */
+@keyframes moveTimeZones {
+  from { transform: translate(0,0); }
+  to { transform: translate(-1000px,0); }
+}
+
+#clock {
+  width: 1000px;
+  height: 600px;
+  margin: auto auto;
+}
+
+#sun {
+  animation: moveTimeZones linear 86400s infinite;
+}
