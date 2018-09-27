@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="description" content="Binary clock developed using CSS and HTML, without JavaScript" />
+    <link rel="author" href="https://alvaromontoro.com" />
+    
+    <title>Binary Clock by Alvaro Montoro</title>
+
+    <link rel="stylesheet" href="./clock-binary-light.css" />
+  </head>
+  <body>
+    <div id="clock">
+      <div id="hours" class="block">
+        <div class="dot"></div>
+        <div class="dot eight"></div>
+        <div class="dot"></div>
+        <div class="dot four"></div>
+        <div class="dot thirtytwo"></div>
+        <div class="dot two"></div>
+        <div class="dot sixteen"></div>
+        <div class="dot one"></div>
+      </div>
+      <div id="minutes" class="block">
+        <div class="dot"></div>
+        <div class="dot eight"></div>
+        <div class="dot"></div>
+        <div class="dot four"></div>
+        <div class="dot thirtytwo"></div>
+        <div class="dot two"></div>
+        <div class="dot sixteen"></div>
+        <div class="dot one"></div>
+      </div>
+      <div id="seconds" class="block">
+        <div class="dot"></div>
+        <div class="dot eight"></div>
+        <div class="dot"></div>
+        <div class="dot four"></div>
+        <div class="dot thirtytwo"></div>
+        <div class="dot two"></div>
+        <div class="dot sixteen"></div>
+        <div class="dot one"></div>
+      </div>
+    </div>
+
+    <script>
+    /**
+      * This code is just to set the initial timing, it could be done on the server side without needing any JS
+      */
+      var date = new Date();
+
+      var seconds = date.getSeconds();
+      var minutes = date.getMinutes() * 60 + seconds;
+      var hours = date.getHours() * 3600 + minutes;
+
+      var clock = document.getElementById("clock");
+      clock.style.setProperty("--seconds", (-seconds) + "s");
+      clock.style.setProperty("--minutes", (-minutes) + "s");
+      clock.style.setProperty("--hours", (-hours) + "s");
+    </script>
+  </body>
+</html>

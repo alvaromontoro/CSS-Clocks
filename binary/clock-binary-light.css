@@ -1,0 +1,173 @@
+html, body {
+  background: #121215;
+}
+
+#clock {
+  position: absolute;
+  width: 310px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.block {
+  width: 90px;
+  margin-right: 20px;
+  float: left;
+}
+
+.block:last-child {
+  margin-right: 0;
+}
+
+.dot {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  float: left;
+  border-radius: 100%;
+  background: #123;
+  position: relative;
+  box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.5), inset 0 0 5px 0 rgba(255,255,255,0.3);
+}
+
+.dot::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  border-radius: 100%;
+  background: rgba(255,255,255,0.2);
+  background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0))
+}
+
+@keyframes one {
+  0% { background: #123; }
+  49.999% { background: #123;  }
+  50% { background: #69c; }
+  99.999% { background: #69c; }
+  100% { background: #123; }
+}
+
+@keyframes four {
+  0% { background: #123; }
+  6.665% { background: #123; }
+  6.666% { background: #69c; }
+  13.332% { background: #69c; }
+  13.333% { background: #123; }
+  19.999% { background: #123; }
+  20% { background: #69c; }
+  26.665% { background: #69c; }
+  26.666% { background: #123; }
+  33.332% { background: #123; }
+  33.333% { background: #69c; }
+  39.999% { background: #69c; }
+  40% { background: #123; }
+  46.665% { background: #123; }
+  46.666% { background: #69c; }
+  53.332% { background: #69c; }
+  53.333% { background: #123; }
+  59.999% { background: #123; }
+  60% { background: #69c; }
+  66.665% { background: #69c; }
+  66.666% { background: #123; }
+  73.332% { background: #123; }
+  73.333% { background: #69c; }
+  79.999% { background: #69c; }
+  80% { background: #123; }
+  86.665% { background: #123; }
+  86.666% { background: #69c; }
+  93.332% { background: #69c; }
+  93.333% { background: #123; }
+  100% { background: #123; }
+}
+
+@keyframes eight {
+  0% { background: #123; }
+  13.332% { background: #123; }
+  13.333% { background: #69c; }
+  26.665% { background: #69c; }
+  26.666% { background: #123; }
+  39.999% { background: #123; }
+  40% { background: #69c; }
+  53.332% { background: #69c; }
+  53.333% { background: #123; }
+  66.665% { background: #123; }
+  66.666% { background: #69c; }
+  79.999% { background: #69c; }
+  80% { background: #123; }
+  93.332% { background: #123; }
+  93.333% { background: #69c; }
+  100% { background: #69c; }
+}
+
+@keyframes sixteen {
+  0% { background: #123; }
+  26.665% { background: #123; }
+  26.666% { background: #69c; }
+  53.332% { background: #69c; }
+  53.333% { background: #123; }
+  79.999% { background: #123; }
+  80% { background: #69c; }
+  100% { background: #69c; }
+}
+
+@keyframes thirtytwo {
+  0% { background: #123; }
+  53.332% { background: #123; }
+  53.333% { background: #69c; }
+  100% { background: #69c; }
+}
+
+
+@keyframes hour-eight {
+  0% { background: #123; }
+  16.665% { background: #123; }
+  16.666% { background: #69c; }
+  33.332% { background: #69c; }
+  33.333% { background: #123; }
+  49.999% { background: #123; }
+  50% { background: #123}
+  66.665% { background: #123; }
+  66.666% { background: #69c; }
+  83.332% { background: #69c; }
+  83.333% { background: #123; }
+  100% { background: #123; }
+}
+
+@keyframes hour-sixteen {
+  0% { background: #123; }
+  66.665% { background: #123; }
+  66.666% { background: #69c; }
+  99.999% { background: #69c; }
+  100% { background: #123; }
+}
+
+#seconds .one { animation: one 2s infinite; }
+#seconds .two { animation: one 4s infinite; }
+#seconds .four { animation: four 60s infinite; }
+#seconds .eight { animation: eight 60s infinite; }
+#seconds .sixteen { animation: sixteen 60s infinite;  }
+#seconds .thirtytwo { animation: thirtytwo 60s infinite;  }
+
+#minutes .one { animation: one 120s infinite; }
+#minutes .two { animation: one 240s infinite; }
+#minutes .four { animation: four 3600s infinite; }
+#minutes .eight { animation: eight 3600s infinite; }
+#minutes .sixteen { animation: sixteen 3600s infinite;  }
+#minutes .thirtytwo { animation: thirtytwo 3600s infinite;  }
+
+#hours .one { animation: one 7200s infinite; }
+#hours .two { animation: one 14400s infinite; }
+#hours .four { animation: one 28800s infinite; }
+#hours .eight { animation: hour-eight 172800s infinite; }
+#hours .sixteen { animation: hour-sixteen 86400s infinite; }
+
+#seconds div.dot { animation-delay: var(--seconds); }
+#minutes div.dot { animation-delay: var(--minutes); }
+#hours div.dot { animation-delay: var(--hours); }
